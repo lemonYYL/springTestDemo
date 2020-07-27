@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 配置User对象创建 -->
+    <bean id="user" class="com.test.spring51.bean.User"></bean>
+
+
+    <bean id="book" class="com.test.spring51.bean.Book" scope="prototype">
+        <property name="name" value="失踪的孩子"></property>
+        <property name="author" value="莱农"></property>
+        <property name="productor" >
+            <null/>
+        </property>
+        <property name="address">
+            <value> <![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
+
+    <bean id="order" class="com.test.spring51.bean.Order">
+        <constructor-arg name="name" value="百香果"></constructor-arg>
+        <constructor-arg name="address" value="湖北"></constructor-arg>
+    </bean>
+</beans>

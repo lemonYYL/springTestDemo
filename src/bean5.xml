@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="coll" class="com.test.spring51.bean.CollectionBean">
+        <property name="ids">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </array>
+        </property>
+        <property name="names">
+            <list>
+                <value>www</value>
+                <value>eeee</value>
+                <value>eeeeee</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="1" value="454.54"></entry>
+                <entry key="2" value="454.53"></entry>
+                <entry key="3" value="454.52"></entry>
+            </map>
+        </property>
+
+        <property name="sets">
+            <set>
+                <value>setts1</value>
+                <value>setts2</value>
+                <value>setts3</value>
+            </set>
+        </property>
+
+        <!--集合中放对象测试-->
+        <property name="courseList">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+                <ref bean="course3"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="course1" class="com.test.spring51.bean.Course">
+        <property name="name" value="数据库"></property>
+    </bean>
+    <bean id="course2" class="com.test.spring51.bean.Course">
+        <property name="name" value="计网"></property>
+    </bean>
+    <bean id="course3" class="com.test.spring51.bean.Course">
+        <property name="name" value="操作系统"></property>
+    </bean>
+
+</beans>

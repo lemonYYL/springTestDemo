@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.test.spring51.bean.Student">
+        <property name="name" value="wll"></property>
+        <property name="gender" value="male"></property>
+        <property name="classRoom" ref="class" ></property>
+        <property name="classRoom.cname" value="高三10班"></property>
+    </bean>
+    <!--<bean id="class" class="com.test.spring51.bean.ClassRoom">
+        <property name="cname" value="三年二班"></property>
+    </bean>-->
+
+    <bean id="class" class="com.test.spring51.bean.ClassRoom"></bean>
+</beans>
